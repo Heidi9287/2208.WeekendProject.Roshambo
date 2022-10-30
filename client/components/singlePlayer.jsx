@@ -9,7 +9,7 @@ const SinglePlayer = ({ selectedPlayer,load}) => {
           </h2>
           <div className="singlePlayerList">
        {selectedPlayer.games.map(game=>{return(<>
-        <p id="gameId">GameId: {game.id}</p>
+        <p id="gameId">Game Id: {game.id}</p>
         <p id="gameResult">
        Game Result: {game.result}</p>
        </> )
