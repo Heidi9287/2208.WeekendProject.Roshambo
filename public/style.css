@@ -17,10 +17,27 @@ h1{color:#79a8ab;
   font-family: 'Orbitron', sans-serif;
 text-align: center;
 padding-top: 20px;
-padding-bottom: 30px;
-font-size:40px;}
+padding-bottom: 30px;font-size:40px;}
+.navBar{
+background-color: #79a8ab;
+height: 40px;
+width: 100vw;
+display: flex;
+justify-content: space-evenly;
+margin-bottom: 80px;
+}
+.navBar button{
+  height:30px;width:200px;font-family: 'Orbitron',sans-serif;
+font-size:16px;border: none;
+margin-top: 5px;
+color:#79a8ab
+  }
+  .navBar button:hover{
+border:3px solid #f0ca32;
+background-color:cornsilk
+    }
 /*-----------------homepage dynamic css----------------*/
-.playerListButton{height:50px;width:200px;font-family: 'Orbitron',sans-serif;
+.playerListButton{height:150px;width:200px;font-family: 'Orbitron',sans-serif;
 font-size:16px;border: none;color: #79a8ab;
 display: block;
 margin-left: auto;
@@ -29,11 +46,11 @@ margin-top: 5px;
 margin-bottom: 5px;
 }
 .playerListButton:hover{
-  height: 55px;
-  width:210px;
+  height: 155px;
+  width:220px;
   border:3px solid #79a8ab;
 }
-.playButton{height:50px;width:200px;font-family: 'Orbitron',sans-serif;
+.playButton{height:150px;width:200px;font-family: 'Orbitron',sans-serif;
   font-size:16px;border: none;color: #79a8ab;
   display: block;
   margin-left: auto;
@@ -42,8 +59,8 @@ margin-bottom: 5px;
 margin-bottom: 5px;
   }
   .playButton:hover{
-    height: 55px;
-    width:210px;
+    height: 155px;
+    width:220px;
     border:3px solid #79a8ab;
   }
 /* -----------------Leaderboard css---------------*/
@@ -80,4 +97,33 @@ padding-top: 30px;}
 #gameResult{float:left;
   font-size:16px;color: #79a8ab;
   font-family: 'Orbitron',sans-serif;
+}
+#lButton{
+  height:50px;width:200px;font-family: 'Orbitron',sans-serif;
+  font-size:16px;border: none;color: #79a8ab;
+  margin-top:100px;
+margin-left:300px;
+}
+#lButton:hover{
+  height:55px;width:210px;
+  border:3px solid #79a8ab;
+}
+/*-------------newPlayerSubmitForm-----------------*/
+.newPlayerSubmitForm{color:#79a8ab;
+  font-family: 'Orbitron', sans-serif;
+text-align: center;
+padding-top: 20px;
+padding-bottom: 30px;font-size:20px;}
+.newPlayerSubmitForm input{
+  width:200px;height:40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.newPlayerSubmitForm button{
+  height:40px;width:200px;font-family: 'Orbitron',sans-serif;
+  font-size:16px;border: none;color: #79a8ab;
+}
+.newPlayerSubmitForm button:hover{
+  height:45px;width:210px;
+  border:3px solid #79a8ab;
 }

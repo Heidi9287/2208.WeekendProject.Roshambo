@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import {setSelectedPlayer} from '../features/playerSlice'
+import axios from 'axios';
+import { Link } from "react-router-dom";
 
-const SinglePlayer = ({ selectedPlayer,load}) => {
- console.log(load)
-      if(load===true){return(
+const SinglePlayer = () => {
+  const {playerId} = useParams() 
+  const selectedPlayer = useSelector(state => state.player.selectedPlayer);
+  const dispatch = useDispatch();
+  const [load, setLoad] = useState(false);
+
+  const selectPlayer = async () => {
+      const selectedOne= await axios.get(`/api/players/${playerId}`);
+      dispatch(setSelectedPlayer(selectedOne.data));
+      setLoad(true);
+      };
+
+  useEffect(()=>{
+    selectPlayer();
+      }, [])
+
+if(load===true){return(<>
+
       <div className="board">
           <h2>
            {selectedPlayer.username}'s game results
@@ -14,7 +34,10 @@ const SinglePlayer = ({ selectedPlayer,load}) => {
        Game Result: {game.result}</p>
        </> )
        })}</div>
-      </div>)
+       <Link to="/players">
+  <button id="lButton">Leaderboard</button>
+</Link>
+      </div></>)
       }
     ;
   };
